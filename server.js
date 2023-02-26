@@ -13,11 +13,12 @@ var dburl = 'mongodb+srv://user:user@cluster0.nnb6g5b.mongodb.net/?retryWrites=t
 
 var schema = new mongoose.Schema({ name: String, message: String});
 var Message = mongoose.model('Message', schema);
-
+//hehehe
 
 app.get('/messages', (req, res) =>{
   Message.find({}, (err, message) =>{
     res.send(message)
+
   })
 });
 
